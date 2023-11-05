@@ -59,8 +59,8 @@ Once the application is running, you can:
 
 ## Screenshots
 
-![Screenshot 1]([screenshots/screenshot1.png](https://files.fm/thumb.php?i=3w48768kp7))
-![Screenshot 2]([screenshots/screenshot2.png](https://files.fm/thumb.php?i=mdby2bsq6f))
+![Screenshot 1](https://files.fm/thumb.php?i=3w48768kp7)
+![Screenshot 2](https://files.fm/thumb.php?i=mdby2bsq6f)
 
 ## Technologies
 
