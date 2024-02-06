@@ -3,9 +3,25 @@ import Card from "../../Components/Card";
 import Layout from "../../Components/Layout";
 import ProductDetail from "../../Components/ProductDetail";
 import { ShoppingCartContext } from "../../Context";
+import { FaceFrownIcon } from "@heroicons/react/24/outline";
 
 function Home() {
   const context = useContext(ShoppingCartContext);
+
+  const renderView = () => {
+    if (context.filteredItems?.length > 0) {
+      return context.filteredItems?.map((item) => (
+        <Card key={item.id} data={item} />
+      ));
+    } else {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <h2>We don't have anything</h2>
+          <FaceFrownIcon className="w-7 h-7" />
+        </div>
+      );
+    }
+  };
 
   return (
     <Layout>
@@ -20,9 +36,7 @@ function Home() {
       />
 
       <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
-        {context.items?.map((item) => (
-          <Card key={item.id} data={item} />
-        ))}
+        {renderView()}
       </div>
       <ProductDetail />
     </Layout>
