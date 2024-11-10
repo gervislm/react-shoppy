@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export const ShoppingCartContext = createContext();
 
@@ -88,6 +89,10 @@ export const ShoppingCartProvider = ({ children }) => {
 
     setFilteredItems(filteredItemsResult);
   }, [items, searchByTitle, searchByCategory]);
+
+  ShoppingCartProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+  };
 
   return (
     <ShoppingCartContext.Provider

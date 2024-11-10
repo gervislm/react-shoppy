@@ -16,7 +16,7 @@ function Home() {
     } else {
       return (
         <div className="flex items-center justify-center gap-2">
-          <h2>We don't have anything</h2>
+          <h2>We don&apos;t have anything</h2>
           <FaceFrownIcon className="w-7 h-7" />
         </div>
       );
